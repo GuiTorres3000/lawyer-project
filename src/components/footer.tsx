@@ -1,126 +1,105 @@
 import Image from "next/image";
 import FacebookDoubleIcon from "@/assets/facebook-double-icon.png";
 import InstagramDoubleIcon from "@/assets/instagram-double-icon.png";
-import LinkedinDoubleIcon from "@/assets/linkedin-double-icon.png";
 import YoutubeDoubleIcon from "@/assets/youtube-double-icon.png";
+import rectangle from "@/assets/Rectangle 5.png";
+import ellipse from "@/assets/Ellipse 1.png";
+
+import logo from "@/assets/logo.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="text-muted text-sm">
-      <section className="grid grid-cols-2 py-14 gap-20 justify-items-center lg:grid-cols-3">
-        <div className="flex flex-col justify-start gap-2 lg:flex-row">
-          <h1 className="text-nowrap font-bold text-heading">Links Úteis</h1>
-          <div className="flex flex-col gap-4 text-nowrap">
-            <a>Sobre</a>
-            <a>Contato</a>
-            <a>FAQs</a>
-            <a>Termos de Serviço</a>
-            <a>Política de Privacidade</a>
-          </div>
+    <footer className="relative overflow-hidden pt-12 pb-8">
+      <div className="relative w-full max-w-6xl mx-auto px-4 flex flex-col gap-8 text-center text-heading text-sm border-t border-heading/25 pt-8">
+        <div className=" grid grid-cols-1 items-center justify-items-center gap-8 md:grid-cols-[auto_1px_auto] md:justify-between md:items-start  ">
+          <section className=" flex flex-col items-center gap-2 border-b border-heading/25 pb-8 md:items-start md:border-b-0 md:pr-8">
+            <Image src={logo} alt="Logo" className="w-[90px] h-[48px] " />
+
+            <p>Atendimento jurídico com ética, confiança e dedicação.</p>
+
+            <div className="flex gap-4 items-center pt-2">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="relative h-[26px] w-[26px] overflow-hidden">
+                  <Image
+                    src={FacebookDoubleIcon}
+                    alt="social-media facebook icon"
+                    className="absolute top-0 left-0 transition-all w-[25px] h-[52px] duration-300 ease-in-out hover:-top-[26px]"
+                  />
+                </div>
+              </a>
+
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="relative h-[26px] w-[26px] overflow-hidden">
+                  <Image
+                    src={YoutubeDoubleIcon}
+                    alt="youtube icon"
+                    className="absolute top-0 left-0 transition-all  w-[26px] h-[52px] duration-300 ease-in-out hover:-top-[26px]"
+                  />
+                </div>
+              </a>
+
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="relative h-[26px] w-[26px] overflow-hidden">
+                  <Image
+                    src={InstagramDoubleIcon}
+                    alt="social-media instagram icon"
+                    className="absolute top-0 left-0 transition-all  w-[26px] h-[52px] duration-300 ease-in-out hover:-top-[26px]"
+                  />
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <div className="hidden md:block h-full w-[1px] bg-heading/25" />
+
+          <section className=" flex flex-col items-center justify-center gap-2 w-72 md:items-start md:text-start">
+            <h1 className="text-lg font-bold">Contato</h1>
+
+            <a href="" className="font-bold underline">
+              62 996627460
+            </a>
+
+            <p>
+              Av. Paulista, 1578, Bela Vista, São Paulo – SP, 01310-200, Brasil.
+            </p>
+          </section>
         </div>
 
-        <div className="flex flex-col justify-start gap-2 lg:flex-row">
-          <h1 className="text-nowrap font-bold text-heading">Carreira</h1>
-          <div className="flex flex-col gap-4 text-nowrap">
-            <a>Sobre</a>
-            <a>Contato</a>
-            <a>FAQs</a>
-            <a>Termos de Serviço</a>
-            <a>Política de Privacidade</a>
-          </div>
-        </div>
+        <section className="flex flex-col items-center  md:justify-between md:flex-row-reverse gap-2 font-bold">
+          <nav className="flex gap-4  ">
+            <a href="/politica-de-privacidade" className="hover:underline">
+              Política de Privacidade
+            </a>
+            <a href="/termos-de-servico" className="hover:underline">
+              Termos de Serviço
+            </a>
+          </nav>
 
-        <div className="flex flex-col justify-start gap-2 lg:flex-row">
-          <h1 className="text-nowrap font-bold text-heading">Recursos</h1>
-          <div className="flex flex-col gap-4 text-nowrap">
-            <a>Sobre</a>
-            <a>Contato</a>
-            <a>FAQs</a>
-            <a>Termos de Serviço</a>
-            <a>Política de Privacidade</a>
-          </div>
-        </div>
+          <p>&copy; {year} — Todos os direitos reservados</p>
+        </section>
+      </div>
 
-      </section>
-
-      <section className="flex flex-col justify-center items-center py-6 border-t-1 border-muted/40 lg:flex-row lg:justify-between">
-        <div className="">logo</div>
-        <div className="flex gap-4 items-center justify-center">
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="relative h-12 w-12 overflow-hidden">
-              <Image
-                src={FacebookDoubleIcon}
-                alt="social-media facebook icon"
-                className="absolute top-1 left-0 transition-all duration-300 ease-in-out hover:-top-11"
-                width={42}
-              />
-            </div>
-          </a>
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="relative h-12 w-12 overflow-hidden">
-              <Image
-                src={LinkedinDoubleIcon}
-                alt="social-media linkedin icon"
-                className="absolute top-1 left-0 transition-all duration-300 ease-in-out hover:-top-11"
-                width={42}
-              />
-            </div>
-          </a>
-          <a
-            href="https://www.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="relative h-12 w-12 overflow-hidden">
-              <Image
-                src={YoutubeDoubleIcon}
-                alt="youtube icon"
-                className="absolute top-1 left-0 transition-all duration-300 ease-in-out hover:-top-11"
-                width={42}
-              />
-            </div>
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="relative h-12 w-12 overflow-hidden">
-              <Image
-                src={InstagramDoubleIcon}
-                alt="social-media instagram icon"
-                className="absolute top-1 left-0 transition-all duration-300 ease-in-out hover:-top-11"
-                width={44}
-              />
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-4  border-muted/45 border-t-1 pt-6">
-        <nav className="flex gap-4">
-          <a href="/politica-de-privacidade" className="hover:underline">
-            Política de Privacidade
-          </a>
-          <a href="/termos-de-servico" className="hover:underline">
-            Termos de Serviço
-          </a>
-          <a href="/politica-de-cookies" className="hover:underline">
-            Política de Cookies
-          </a>
-        </nav>
-
-        <p>&copy; {year} — Todos os direitos reservados</p>
+      <div className="absolute -bottom-14 -z-10 pointer-events-none ">
+        <Image src={rectangle} alt="rectangle background" />
+        <Image
+          src={ellipse}
+          alt="ellipse background"
+          className="absolute left-26 top-10"
+        />
       </div>
     </footer>
   );
