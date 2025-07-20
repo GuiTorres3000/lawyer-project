@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
-      <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between gap-4">
+      <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
         <a href="/">
           <Image
             src={logo}

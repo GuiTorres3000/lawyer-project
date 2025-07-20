@@ -2,7 +2,7 @@ import Image from "next/image";
 import FacebookDoubleIcon from "@/assets/facebook-double-icon.png";
 import InstagramDoubleIcon from "@/assets/instagram-double-icon.png";
 import YoutubeDoubleIcon from "@/assets/youtube-double-icon.png";
-import rectangle from "@/assets/Rectangle 5.png";
+import rectangle from "@/assets/rectangle.svg";
 import ellipse from "@/assets/Ellipse 1.png";
 
 import logo from "@/assets/logo.png";
@@ -93,13 +93,8 @@ export default function Footer() {
         </section>
       </div>
 
-      <div className="absolute -bottom-14 -z-10 pointer-events-none ">
+      <div className="absolute top-16 -left-80  lg:-left-50 -z-10 pointer-events-none ">
         <Image src={rectangle} alt="rectangle background" />
-        <Image
-          src={ellipse}
-          alt="ellipse background"
-          className="absolute left-26 top-10"
-        />
       </div>
     </footer>
   );
