@@ -19,3 +19,17 @@ body {
     var(--color-background);
   background-attachment: fixed;
 }
+
+@layer utilities {
+  .spin-slow {
+    animation-duration: 2s; 
+  }
+
+  .spin-slower {
+    animation-duration: 15s;
+  }
+
+  .spin-fast {
+    animation-duration: 0.5s;
+  }
+}
