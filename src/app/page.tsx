@@ -4,7 +4,9 @@ import legalExcellence from "@/assets/circle-legal-excellence.png";
 import rectangle from "@/assets/rectangle.svg";
 import CardRating from "@/components/cardRating";
 import woodenGavel from "@/assets/wooden-gavel.svg";
+import Services from "@/components/services";
 import Whatwedo from "@/components/whatwedo";
+
 
 export default function Home() {
   return (
@@ -25,7 +27,7 @@ export default function Home() {
         <Image
           src={woodenGavel}
           alt="Martelo de madeira"
-          className="hidden md:block w-[300px] h-[300px] absolute bottom-26 right-0"
+          className="hidden md:block w-[300px] h-[300px] absolute right-0"
         />
         <p>
           Prestamos assessoria jurídica personalizada com foco na solução
@@ -33,7 +35,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="flex absolute -top-50 -right-50 rotate-180 -z-90">
+      <div className=" flex absolute -top-50 -right-50 rotate-180 -z-90">
         <Image src={rectangle} alt="rectangle background" />
         <Image
           src={rectangle}
@@ -41,8 +43,10 @@ export default function Home() {
           className="scale-200"
         />
       </div>
-
       <Whatwedo />
+      <Services />
+      
+
     </div>
   );
 }
