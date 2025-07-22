@@ -7,7 +7,7 @@ import logo5  from '../../../assets/Logo-4.svg';
 import Image from "next/image";
 export default function AchievementPage() {
     return (
-        <section className='relative z-50'>
+        <section className='relative '>
             <div className=' flex flex-col gap-4 items-center justify-center w-full max-w-6xl mx-auto px-4 pt-20 text-heading text-center'>
                 <Image src={starsRating} alt="Achievement Image" width={100}  />  
                 <h2 className='text-5xl font-serif text-accent'>CONQUISTAS</h2>
