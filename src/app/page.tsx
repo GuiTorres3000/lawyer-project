@@ -4,6 +4,7 @@ import legalExcellence from "@/assets/circle-legal-excellence.png";
 import rectangle from "@/assets/rectangle.svg";
 import CardRating from "@/components/cardRating";
 import woodenGavel from "@/assets/wooden-gavel.svg";
+import Whatwedo from "@/components/whatwedo";
 
 export default function Home() {
   return (
@@ -40,6 +41,8 @@ export default function Home() {
           className="scale-200"
         />
       </div>
+
+      <Whatwedo />
     </div>
   );
 }

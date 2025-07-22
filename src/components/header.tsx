@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "@/assets/logo.png";
 
@@ -19,7 +20,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
-        <a href="/">
+        <Link href="/">
           <Image
             src={logo}
             width={90}
@@ -28,7 +29,7 @@ export default function Header() {
             priority
             className="h-auto w-auto"
           />
-        </a>
+        </Link>
 
         <nav className="hidden md:flex justify-center gap-10 bg-white/90 backdrop-blur-md rounded-lg px-12 py-4 shadow-lg text-heading text-sm font-medium">
           {NAV_ITEMS.map((item) => (
