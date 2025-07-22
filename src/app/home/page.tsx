@@ -1,6 +1,8 @@
-import Whatwedo from "@/components/whatwedo";
 import HeroPage from "./hero/page";
 import AchievementPage from "./achievement/page";
+import Whatwedo from "./whatWeDo/page";
+import LawServices from "./lawServices/page";
+
 
 export default function Home() {
   return (
@@ -8,6 +10,7 @@ export default function Home() {
       <HeroPage />
       <Whatwedo />
       <AchievementPage />
+      <LawServices />
     </div>
   );
 }
