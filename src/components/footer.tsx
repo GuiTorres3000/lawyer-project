@@ -3,7 +3,6 @@ import FacebookDoubleIcon from "@/assets/facebook-double-icon.png";
 import InstagramDoubleIcon from "@/assets/instagram-double-icon.png";
 import YoutubeDoubleIcon from "@/assets/youtube-double-icon.png";
 import rectangle from "@/assets/rectangle.svg";
-import ellipse from "@/assets/Ellipse 1.png";
 
 import logo from "@/assets/logo.png";
 

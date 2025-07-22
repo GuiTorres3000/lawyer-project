@@ -1,5 +1,5 @@
 import Image from "next/image";
-import InfoCard from "./infoCard";
+import InfoCard from "../../../components/infoCard";
 import rectangle from "@/assets/rectangle.svg";
 import doubleEllipse from "@/assets/doubleEllipse.svg";
 
