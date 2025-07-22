@@ -18,7 +18,8 @@ export default function Whatwedo() {
             <div className="text-center mb-12">
                   <h2 className="text-3xl font-thin font-serif text-accent">ONDE ATUAMOS?</h2>
             </div>
-            <div className="flex justify-center items-center gap-40 text-accent">
+            <div className="flex justify-center items-center text-accent
+                  flex-col gap-10 lg:flex-row lg:gap-16">
                   {items.map((item) => (
                         <CardActivity 
                         key={item.title} 
