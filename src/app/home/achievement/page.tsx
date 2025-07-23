@@ -7,8 +7,8 @@ import logo5  from '../../../assets/Logo-4.svg';
 import Image from "next/image";
 export default function AchievementPage() {
     return (
-        <section className='relative z-50'>
-            <div className=' flex flex-col gap-4 items-center justify-center w-full max-w-6xl mx-auto px-4 pt-20 text-heading text-center'>
+        <section className='relative'>
+            <div className=' flex flex-col gap-4 items-center justify-center w-full max-w-6xl mx-auto px-4 pt-2 text-heading text-center'>
                 <Image src={starsRating} alt="Achievement Image" width={100}  />  
                 <h2 className='text-5xl font-serif text-accent'>CONQUISTAS</h2>
                 <h3 className='text-accent opacity-30 font-serif text-2xl max-w-120'>SOME INTERNATIONAL AWARDS THAT WE HAVE RECEIVED</h3>

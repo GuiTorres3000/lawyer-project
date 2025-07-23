@@ -9,8 +9,8 @@ export default function Home() {
     <div>
       <HeroPage />
       <Whatwedo />
-      <AchievementPage />
       <LawServices />
+      <AchievementPage />
     </div>
   );
 }
