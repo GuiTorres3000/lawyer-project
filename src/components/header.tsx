@@ -7,11 +7,11 @@ import { FiMenu, FiX } from "react-icons/fi";
 import logo from "@/assets/logo.png";
 
 const NAV_ITEMS = [
-  { label: "Início", href: "" },
-  { label: "Sobre mim", href: "" },
-  { label: "Serviços", href: "" },
-  { label: "Casos", href: "" },
-  { label: "Blog", href: "" },
+  { label: "Início", href: "", delay: "100" },
+  { label: "Sobre mim", href: "", delay: "150"},
+  { label: "Serviços", href: "", delay: "200"},
+  { label: "Casos", href: "", delay: "250"},
+  { label: "Blog", href: "", delay: "300"},
 ];
 
 export default function Header() {
@@ -22,6 +22,7 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
         <Link href="/">
           <Image
+            data-aos="fade-right"
             src={logo}
             width={90}
             height={48}
@@ -34,6 +35,8 @@ export default function Header() {
         <nav className="hidden md:flex justify-center gap-10 bg-white/90 backdrop-blur-md rounded-lg px-12 py-4 shadow-lg text-heading text-sm font-medium">
           {NAV_ITEMS.map((item) => (
             <a
+              data-aos="fade-down"
+              data-aos-delay={item.delay}
               key={item.label}
               href={item.href}
               className="transition-colors hover:text-secondary"
@@ -45,6 +48,7 @@ export default function Header() {
 
         <div className="hidden md:block">
           <a
+            data-aos="fade-left"
             href="/contato"
             className="inline-block font-semibold underline decoration-2 underline-offset-4 hover:text-secondary transition-colors"
           >

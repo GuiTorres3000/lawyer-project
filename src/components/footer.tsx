@@ -10,10 +10,12 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden pt-12 pb-8">
-      <div className="relative w-full max-w-6xl mx-auto px-4 flex flex-col gap-8 text-center text-heading text-sm border-t border-heading/25 pt-8">
+    <footer  className="relative overflow-hidden pt-12 pb-8">
+      <div data-aos='fade-up' data-aos-duration='500' className="relative w-full max-w-6xl mx-auto px-4 flex flex-col gap-8 text-center text-heading text-sm border-t border-heading/25 pt-8">
         <div className=" grid grid-cols-1 items-center justify-items-center gap-8 md:grid-cols-[auto_1px_auto] md:justify-between md:items-start  ">
-          <section className=" flex flex-col items-center gap-2 border-b border-heading/25 pb-8 md:items-start md:border-b-0 md:pr-8">
+          <section 
+          data-aos='fade-up' data-aos-duration='500' data-aos-delay='100'
+          className=" flex flex-col items-center gap-2 border-b border-heading/25 pb-8 md:items-start md:border-b-0 md:pr-8">
             <Image src={logo} alt="Logo" className="w-[90px] h-[48px] " />
 
             <p>Atendimento jurídico com ética, confiança e dedicação.</p>
@@ -65,7 +67,9 @@ export default function Footer() {
 
           <div className="hidden md:block h-full w-[1px] bg-heading/25" />
 
-          <section className=" flex flex-col items-center justify-center gap-2 w-72 md:items-start md:text-start">
+          <section
+          data-aos='fade-up' data-aos-duration='500' data-aos-delay='100'
+          className=" flex flex-col items-center justify-center gap-2 w-72 md:items-start md:text-start">
             <h1 className="text-lg font-bold">Contato</h1>
 
             <a href="" className="font-bold underline">
@@ -78,8 +82,9 @@ export default function Footer() {
           </section>
         </div>
 
-        <section className="flex flex-col items-center  md:justify-between md:flex-row-reverse gap-2 font-bold">
-          <nav className="flex gap-4  ">
+        <section 
+        className="flex flex-col items-center  md:justify-between md:flex-row-reverse gap-2 font-bold">
+          <nav  className="flex gap-4  ">
             <a href="/politica-de-privacidade" className="hover:underline">
               Política de Privacidade
             </a>
@@ -92,7 +97,7 @@ export default function Footer() {
         </section>
       </div>
 
-      <div className="absolute top-16 -left-80  lg:-left-50 -z-10 pointer-events-none ">
+      <div data-aos='fade-up' data-aos-duration='500' data-aos-delay='200' className="absolute top-16 -left-80  lg:-left-50 -z-10 pointer-events-none ">
         <Image src={rectangle} alt="rectangle background" />
       </div>
     </footer>
