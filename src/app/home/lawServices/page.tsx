@@ -30,7 +30,7 @@ const SERVICES = [
 
 export default function Services(){
     return (
-        <section className="text-accent mt-20 relative overflow-hidden min-h-160 lg:min-h-120 py-20">
+        <section className="text-accent mt-2 relative overflow-hidden min-h-120 lg:min-h-90 py-16">
             <main className=" px-4  relative max-w-6xl mx-auto">
                 <div className="mb-20 mx-auto" >
                     <h2 className=" text-center  font-serif text-3xl font-semibold ">Porque nos escolher para resolver seus problemas</h2>
