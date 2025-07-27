@@ -33,9 +33,9 @@ const SERVICES = [
 
 export default function Services(){
     return (
-        <section className="text-accent mt-2 relative overflow-hidden min-h-120 lg:min-h-90 py-16">
+        <section className="text-accent mt-2 relative  min-h-120 lg:min-h-90 py-16">
             <main className=" px-4  relative max-w-6xl mx-auto">
-                <div data-aos='fade-up' className="mb-20 mx-auto" >
+                <div data-aos='fade-in' className="mb-20 mx-auto" >
                     <h2 className=" text-center  font-serif text-3xl font-semibold ">Porque nos escolher para resolver seus problemas</h2>
                 </div>
                 <aside className="grid grid-cols-1 justify-items-center gap-8 mt-10 w-full md:grid-cols-2">
@@ -50,9 +50,8 @@ export default function Services(){
                     ))}
                 </aside>
             </main>
-            <div className="absolute opacity-70 lg:opacity-100 -left-70 md:scale-150 lg:scale-100 -bottom-30 w-100 lg:w-160 lg:-bottom-50 rotate-40 pointer-events-none"><Image src={doubleEllipse} alt="ellipse background" /></div>
-            <div className="absolute  opacity-70 lg:opacity-100 -right-80 md:scale-125 lg:scale-100 lg:-right-125 top-1/2 lg:top-1/3 w-100 lg:w-180 -translate-y-1/3 -rotate-115 pointer-events-none"><Image src={rectangle} alt="ellipse background" /></div>
-            <div className=" absolute opacity-70 lg:opacity-100 -right-75 md:scale-125 lg:scale-100 lg:-right-125 top-1/2 lg:top-1/4  w-100 lg:w-180 -rotate-110 pointer-events-none"><Image src={rectangle} alt="ellipse background" /></div>
+            <div data-aos='fade-right' data-aos-delay='300' className="absolute opacity-70 lg:opacity-100 -left-70 md:scale-150 lg:scale-100 -bottom-30 w-100 lg:w-160 lg:-bottom-50 rotate-40 pointer-events-none"><Image src={doubleEllipse} alt="ellipse background" /></div>
+           
         </section>
     );
 }
