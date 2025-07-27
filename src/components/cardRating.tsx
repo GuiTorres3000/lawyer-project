@@ -9,6 +9,8 @@ interface CardRatingProps {
 export default function CardRating({ className }: CardRatingProps) {
   return (
     <div
+      data-aos='zoom-in'
+      data-aos-delay='200'
       className={`flex flex-col gap-10 h-36 px-4 py-2 rounded-2xl text-accent border-2 border-accent bg-background ${className}`}
     >
       <div className="flex gap-2 justify-start items-center">

@@ -8,37 +8,41 @@ const SERVICES = [
     {
         title: "Direito Civil",
         text: "Advocacia especializada em direito civil",
-        imageUrl: "/infoIcon.svg"
-        
+        imageUrl: "/infoIcon.svg",
+        delay:'100'
     },
     {
         title: "Direito Civil",
         text: "Consultoria jurídica para empresasaaaaaaaaaaaaaaaaaaaaaaaaa",
-        imageUrl: "/infoIcon.svg"
+        imageUrl: "/infoIcon.svg",
+        delay:'150'
     },
     {
         title: "Direito Civil",
         text: "Defesa em processos judiciaisaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        imageUrl: "/infoIcon.svg"
+        imageUrl: "/infoIcon.svg",
+        delay:'200'
     },
     {
         title: "Direito Civil",
         text: "Defesa em processos judiciaissssasdasdasdas",
-        imageUrl: "/infoIcon.svg"
+        imageUrl: "/infoIcon.svg",
+        delay:'250'
     }
 ]
 
 export default function Services(){
     return (
-        <section className="text-accent mt-20 relative overflow-hidden min-h-160 lg:min-h-120 py-20">
+        <section className="text-accent mt-2 relative overflow-hidden min-h-120 lg:min-h-90 py-16">
             <main className=" px-4  relative max-w-6xl mx-auto">
-                <div className="mb-20 mx-auto" >
+                <div data-aos='fade-up' className="mb-20 mx-auto" >
                     <h2 className=" text-center  font-serif text-3xl font-semibold ">Porque nos escolher para resolver seus problemas</h2>
                 </div>
                 <aside className="grid grid-cols-1 justify-items-center gap-8 mt-10 w-full md:grid-cols-2">
                     {SERVICES.map((service) => (
                         <InfoCard
                             key={service.text}
+                            delay={service.delay}
                             title={service.title}
                             text={service.text}
                             imageUrl={service.imageUrl}
