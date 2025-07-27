@@ -7,7 +7,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import logo from "@/assets/logo.png";
 
 const NAV_ITEMS = [
-  { label: "Início", href: "" },
+  { label: "Início", href: "/" },
   { label: "Sobre mim", href: "" },
   { label: "Serviços", href: "" },
   { label: "Casos", href: "" },
