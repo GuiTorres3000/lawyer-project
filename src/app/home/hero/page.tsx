@@ -3,7 +3,7 @@ import justiceStatue from "@/assets/3d-justice-scales.png";
 import legalExcellence from "@/assets/circle-legal-excellence.png";
 import rectangle from "@/assets/rectangle.svg";
 import CardRating from "@/components/cardRating";
-import woodenGavel from "@/assets/wooden-gavel.svg";
+
 
 export default function HeroPage() {
   return (
