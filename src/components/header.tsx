@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -8,17 +8,33 @@ import logo from "@/assets/logo.png";
 
 const NAV_ITEMS = [
   { label: "Início", href: "", delay: "100" },
-  { label: "Sobre mim", href: "", delay: "150"},
-  { label: "Serviços", href: "", delay: "200"},
-  { label: "Casos", href: "", delay: "250"},
-  { label: "Blog", href: "", delay: "300"},
+  { label: "Sobre mim", href: "", delay: "150" },
+  { label: "Serviços", href: "", delay: "200" },
+  { label: "Casos", href: "", delay: "250" },
+  { label: "Blog", href: "", delay: "300" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
+    <header
+      className={`
+        fixed top-0 left-0 w-full z-50 transition-all
+        ${open ? "duration-0" : "duration-300"} 
+        ${scrolled && !open 
+          ? "bg-gradient-to-l from-primary/30 to-white backdrop-blur-md shadow-md py-2"
+          : "bg-transparent"}
+      `}
+    >
       <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
         <Link href="/">
           <Image
@@ -83,7 +99,7 @@ export default function Header() {
 
       <div
         id="mobile-menu"
-        className={`md:hidden fixed top-0 right-0 h-full w-72 max-w-[80%] z-50 bg-white shadow-xl flex flex-col pt-24 pb-8 px-8 gap-8 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-screen w-72 max-w-[80%] z-50 bg-white shadow-xl flex flex-col pt-24 pb-8 px-8 gap-8 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
