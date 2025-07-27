@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/header";
+import AosInit from "@/components/aos-init";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={inter.className}>
       <body className="min-h-screen flex flex-col">
+        <AosInit />
         <Header/>
         <main className="flex-1  py-4 overflow-x-hidden">{children}</main>
         <Footer />
