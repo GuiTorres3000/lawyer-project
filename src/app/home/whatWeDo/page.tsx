@@ -15,7 +15,7 @@ export default function Whatwedo() {
       return (
       <section className="pt-20">
 
-            <div data-aos='fade-up' className="text-center mb-12">
+            <div data-aos='fade-in' className="text-center mb-12">
                   <h2 className="text-3xl font-thin font-serif text-accent">ONDE ATUAMOS?</h2>
             </div>
             <div className="flex justify-center items-center text-accent

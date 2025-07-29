@@ -12,7 +12,9 @@ interface activityProps {
 export default function CardActivity({ icon, title, description,delay }: activityProps) {
       return (
             <div className="flex flex-col items-center justify-center gap-4">
-                  <div data-aos='flip-right' data-aos-delay={delay} className="flex items-center justify-center h-28 w-28 rounded-3xl bg-secondary">
+                  <div 
+                  data-aos='zoom-out' 
+                  data-aos-delay={delay} className="flex items-center justify-center h-28 w-28 rounded-3xl bg-secondary">
                         <div className="text-white">{icon}</div>
                   </div>
                   <div className="text-center w-[25rem]">

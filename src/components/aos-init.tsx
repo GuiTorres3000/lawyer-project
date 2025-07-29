@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 export default function AosInit() {
   useEffect(() => {
     AOS.init({
-      duration: 150,
+      duration: 600,
       once: true,
     //   disable: "mobile",
     });

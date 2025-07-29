@@ -3,7 +3,7 @@ import justiceStatue from "@/assets/3d-justice-scales.png";
 import legalExcellence from "@/assets/circle-legal-excellence.png";
 import rectangle from "@/assets/rectangle.svg";
 import CardRating from "@/components/cardRating";
-import woodenGavel from "@/assets/wooden-gavel.svg";
+
 
 export default function HeroPage() {
   return (
@@ -19,22 +19,16 @@ export default function HeroPage() {
           <div  className="animate-spin spin-slower w-[150px] h-[150px] absolute bottom-1/4 -left-20">
 
           <Image
-            data-aos='zoom-in'
-            aos-delay='200'
+            
             src={legalExcellence}
             alt="Circulo girando texto excelência jurídica"
             className="w-[150px] h-[150px]"
           />
           </div>
-          <Image data-aos="fade-in" src={justiceStatue} alt="Estatua da justiça" className="ani" />
+          <Image data-aos="zoom-out" src={justiceStatue} alt="Estatua da justiça" className="ani" />
           <CardRating  className="hidden md:flex absolute  scale-75 md:-right-30 lg:-right-40 xl:-right-80 lg:scale-100 top-2" />
         </div>
-        <Image
-          data-aos="fade-left"
-          src={woodenGavel}
-          alt="Martelo de madeira"
-          className="hidden md:block w-[300px] h-[300px] absolute bottom-26 right-0"
-        />
+        
         <p data-aos='fade-in'>
           Prestamos assessoria jurídica personalizada com foco na solução
           estratégica de conflitos e na prevenção de riscos.
@@ -42,8 +36,12 @@ export default function HeroPage() {
       </div>
 
       <div className="flex absolute -top-50 -right-50 rotate-180 -z-90">
-        <Image src={rectangle} alt="rectangle background" />
+        <Image src={rectangle} data-aos='zoom-out'
+        data-aos-delay='400'
+        alt="rectangle background" />
         <Image
+          data-aos='zoom-out'
+          data-aos-delay='500'
           src={rectangle}
           alt="rectangle background"
           className="scale-200"
