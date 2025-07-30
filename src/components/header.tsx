@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "@/assets/logo.png";
 
 const NAV_ITEMS = [
-  { label: "Início", href: "" },
+  { label: "Início", href: "/" },
   { label: "Sobre mim", href: "" },
   { label: "Serviços", href: "" },
   { label: "Casos", href: "" },
@@ -16,12 +16,30 @@ const NAV_ITEMS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
-      <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
+    <header
+    
+      className={`
+        fixed top-0 left-0 w-full z-50 transition-all
+        ${open ? "duration-0" : "duration-300"} 
+        ${scrolled && !open 
+          ? "bg-gradient-to-l from-primary/30 to-white backdrop-blur-md shadow-md py-2"
+          : "bg-transparent"}
+      `}
+    >
+      <div data-aos="zoom-out" className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
         <Link href="/">
           <Image
+            
             src={logo}
             width={90}
             height={48}
@@ -31,9 +49,10 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden md:flex justify-center gap-10 bg-white/90 backdrop-blur-md rounded-lg px-12 py-4 shadow-lg text-heading text-sm font-medium">
+        <nav  className="hidden md:flex justify-center gap-10 bg-white/90 backdrop-blur-md rounded-lg px-12 py-4 shadow-lg text-heading text-sm font-medium">
           {NAV_ITEMS.map((item) => (
             <a
+              
               key={item.label}
               href={item.href}
               className="transition-colors hover:text-secondary"
@@ -43,10 +62,11 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block transition-all">
           <a
+          
             href="/contato"
-            className="inline-block font-semibold underline decoration-2 underline-offset-4 hover:text-secondary transition-colors"
+            className="inline-block font-semibold underline decoration-2 underline-offset-4 text-accent hover:text-secondary transition-colors "
           >
             Fale conosco
           </a>
@@ -79,7 +99,7 @@ export default function Header() {
 
       <div
         id="mobile-menu"
-        className={`md:hidden fixed top-0 right-0 h-full w-72 max-w-[80%] z-50 bg-white shadow-xl flex flex-col pt-24 pb-8 px-8 gap-8 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-screen w-72 max-w-[80%] z-50 bg-white shadow-xl flex flex-col pt-24 pb-8 px-8 gap-8 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
