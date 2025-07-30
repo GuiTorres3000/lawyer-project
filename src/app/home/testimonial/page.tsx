@@ -12,7 +12,7 @@ import profile3 from "@/assets/profile3.svg";
 import rectangle from "@/assets/rectangle.svg";
 import { Counter } from "@/components/Counter";
 
-export function TestimonialsPage() {
+export default function TestimonialsPage() {
   const reviews = [
     {
       text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.",
