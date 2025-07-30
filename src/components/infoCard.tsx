@@ -4,9 +4,9 @@ interface InfoCardProps {
     title: string,
     text: string,
     imageUrl: string,
-}
+    delay?: string
 
-export default function InfoCard({ text, imageUrl,title,delay }: InfoCardProps) {
+export default function InfoCard({ text, imageUrl,title, delay }: InfoCardProps) {
     return (
         <div 
         data-aos='fade-up' data-aos-delay={delay}

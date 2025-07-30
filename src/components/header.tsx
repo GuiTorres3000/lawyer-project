@@ -27,19 +27,22 @@ export default function Header() {
 
   return (
     <header
-    
       className={`
         fixed top-0 left-0 w-full z-50 transition-all
         ${open ? "duration-0" : "duration-300"} 
-        ${scrolled && !open 
-          ? "bg-gradient-to-l from-primary/30 to-white backdrop-blur-md shadow-md py-2"
-          : "bg-transparent"}
+        ${
+          scrolled && !open
+            ? "bg-gradient-to-l from-primary/30 to-white backdrop-blur-md shadow-md py-2"
+            : "bg-transparent"
+        }
       `}
     >
-      <div data-aos="zoom-out" className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
+      <div
+        data-aos="zoom-out"
+        className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4"
+      >
         <Link href="/">
           <Image
-            
             src={logo}
             width={90}
             height={48}
@@ -52,7 +55,6 @@ export default function Header() {
         <nav  className="hidden md:flex justify-center gap-10 bg-white/90 backdrop-blur-md rounded-lg px-12 py-4 shadow-lg text-heading text-sm font-medium">
           {NAV_ITEMS.map((item) => (
             <a
-              
               key={item.label}
               href={item.href}
               className="transition-colors hover:text-secondary"
@@ -64,7 +66,6 @@ export default function Header() {
 
         <div className="hidden md:block transition-all">
           <a
-          
             href="/contato"
             className="inline-block font-semibold underline decoration-2 underline-offset-4 text-accent hover:text-secondary transition-colors "
           >
@@ -80,11 +81,8 @@ export default function Header() {
           onClick={() => setOpen((p) => !p)}
           className="md:hidden p-3 rounded-md bg-white/90 backdrop-blur shadow-lg active:scale-95 transition flex items-center justify-center z-60 relative"
         >
-          {open ? (
-            <FiX className="w-6 h-6 text-heading" />
-          ) : (
             <FiMenu className="w-6 h-6 text-heading" />
-          )}
+
         </button>
       </div>
 
@@ -99,10 +97,19 @@ export default function Header() {
 
       <div
         id="mobile-menu"
-        className={`fixed top-0 right-0 h-screen w-72 max-w-[80%] z-50 bg-white shadow-xl flex flex-col pt-24 pb-8 px-8 gap-8 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-screen w-72 max-w-[80%] z-40 bg-white shadow-xl flex flex-col pt-24 pb-8 px-8 gap-8 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        <button
+          type="button"
+          aria-label="Fechar menu"
+          onClick={() => setOpen(false)}
+          className="absolute top-4 right-4 p-3 rounded-md  hover:bg-secondary active:scale-95 transition"
+        >
+          <FiX className="w-6 h-6 text-heading" />
+        </button>
+
         <nav className="flex flex-col gap-6 text-lg font-medium text-heading">
           {NAV_ITEMS.map((item) => (
             <a
