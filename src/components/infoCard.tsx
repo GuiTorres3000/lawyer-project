@@ -1,10 +1,9 @@
 import Image from "next/image";
 
 interface InfoCardProps {
-    title:string;
-    text:string;
-    imageUrl: any;
-    delay?: string;
+    title: string,
+    text: string,
+    imageUrl: string,
 }
 
 export default function InfoCard({ text, imageUrl,title,delay }: InfoCardProps) {
