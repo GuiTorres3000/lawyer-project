@@ -52,7 +52,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden md:flex justify-center gap-10 bg-white/90 backdrop-blur-md rounded-lg px-12 py-4 shadow-lg text-heading text-sm font-medium">
+        <nav  className="hidden md:flex justify-center gap-10 bg-white/90 backdrop-blur-md rounded-lg px-12 py-4 shadow-lg text-heading text-sm font-medium">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
