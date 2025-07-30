@@ -5,6 +5,7 @@ interface InfoCardProps {
     text: string,
     imageUrl: string,
     delay?: string
+}
 
 export default function InfoCard({ text, imageUrl,title, delay }: InfoCardProps) {
     return (
