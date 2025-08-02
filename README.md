@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LawWebsite NEXTJS ⚖️
 
-## Getting Started
+Um site institucional escritórios de advocacia, desenvolvido com Next.js, TypeScript e Tailwind CSS. Este projeto foi criado para aprofundar conhecimentos em desenvolvimento web fullstack, focando em boas práticas, performance, acessibilidade e arquitetura escalável.
 
-First, run the development server:
+## ✨ Principais Conceitos Aplicados
+- Next.js (App Router): Estrutura de rotas modernas, server-side rendering e otimização automática.
+- TypeScript: Tipagem estática para maior robustez, segurança e produtividade no desenvolvimento.
+- Tailwind CSS: Estilização utilitária, responsiva e altamente customizável.
+- Componentização: Separação clara de responsabilidades com componentes reutilizáveis para seções como header, footer, cards, depoimentos, etc.
+- Boas Práticas de Acessibilidade: Uso de semântica HTML adequada e foco em experiência do usuário.
+- Organização de Assets: Imagens, ícones e recursos visuais organizados para fácil manutenção.
+- Deploy Facilitado: Pronto para ser hospedado em plataformas como Vercel.
 
+## 🏗️ Estrutura do Projeto
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+  app/            # Páginas e rotas (Next.js App Router)
+    home/         # Seções da página inicial (hero, serviços, depoimentos, etc)
+    contato/      # Página de contato
+    layout.tsx    # Layout global
+    globals.css   # Estilos globais
+  components/     # Componentes reutilizáveis (header, footer, cards, etc)
+  assets/         # Imagens, ícones e recursos visuais
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Como rodar o projeto
+```bash
+# Instale as dependências
+npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Rode o projeto em modo desenvolvimento
+npm run dev
+```
